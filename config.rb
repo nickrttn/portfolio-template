@@ -2,6 +2,18 @@ require "extensions/views"
 
 activate :views
 activate :directory_indexes
+activate :protect_emails
+
+# Piwik tracking code
+# activate :piwik do |p|
+#   p.id = 1
+#   p.domain = "yourdomain.com/piwik" # Replace with your Piwik tracking domain.
+# end
+
+# Google Analytics tracking code
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-64084727-1' # Replace with your property ID.
+end
 
 set :relative_links, true
 set :css_dir, 'assets/stylesheets'
