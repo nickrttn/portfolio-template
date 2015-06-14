@@ -9,7 +9,7 @@ Placemat is the result of the first group-project at Communication and Multimedi
 
 Along the way they gather a plethora of ingredients while receiving background info about the recipe these ingredients make up. At the end of the tour they get the accompanying recipe.
 
-The application uses the Google Maps API through a custom JavaScript geolocation toolkit by Justus [@ju5tu5](https://twitter.com/ju5tu5) which makes it very easy to pinpoint locations and create walking routes through JSON files.
+The application uses the Google Maps API through a custom JavaScript geolocation toolkit by one of our teachers, [@ju5tu5](https://twitter.com/ju5tu5), which makes it very easy to pinpoint locations and create walking routes through JSON files.
 
 ### Example part of the JSON file
 

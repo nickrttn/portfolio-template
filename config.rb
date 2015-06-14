@@ -28,8 +28,10 @@ activate :i18n
 # Enable and configure portfolio items
 activate :blog do |blog|
   # Blog options
-  blog.sources = "portfolio/{category}/{title}.html"
-  blog.permalink = "portfolio/{category}/{title}.html"
+  blog.sources = "{title}.html"
+  blog.prefix = "portfolio"
+  blog.permalink = "{title}.html"
+  blog.layout = "article"
 end
 
 activate :views
@@ -45,7 +47,7 @@ set :fonts_dir, 'assets/fonts'
 set :layout, 'layouts/application'
 set :partials_dir, 'layouts/partials'
 
-page "portfolio/*.html", :layout => :article_layout
+page 'portfolio/*', :layout => :article
 
 configure :development do
  activate :livereload

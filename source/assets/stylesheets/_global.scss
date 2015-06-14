@@ -32,4 +32,18 @@ header {
 }
 
 main {
+  aside {
+    @include span-columns(3);
+  }
+  article {
+    @include span-columns(6);
+    @include omega;
+  }
+  .highlight {
+    background-color: white;
+    code {
+      font-size: em(10);
+      font-family: 'Roboto Mono', monospace;
+    }
+  }
 }

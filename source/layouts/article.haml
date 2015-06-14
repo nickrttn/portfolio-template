@@ -1,0 +1,8 @@
+= wrap_layout :layout do
+  %aside
+    - current_page.tags.each do |tag|
+      = link_to tag, tag_path(tag)
+  %article
+    %h2= current_page.data.title
+    = article.data
+    = yield
