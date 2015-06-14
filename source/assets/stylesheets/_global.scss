@@ -1,19 +1,37 @@
 body {
-  background-color: $light-gray;
-  color: $medium-gray;
+  @include outer-container;
 }
 
-.delete-me {
-  @include align-items(center);
-  @include display(flex);
-  @include justify-content(center);
-  height: 100vh;
+.wrapper {
+  @include span-columns(12);
+}
 
-  .container {
-    text-align: center;
-
+header {
+  .branding, nav {
+    @include span-columns(6 of 12);
+  }
+  .branding {
+    h1, p {
+      display: inline-block;
+    }
     h1 {
-      font-weight: 200;
+      margin-right: $small-spacing/2;
     }
   }
+  nav {
+    @include omega();
+    padding-top: $h1-font-size*1.75;
+    ul {
+      float: right;
+      li {
+        display: inline-block;
+        padding: 0 $small-spacing;
+      }
+    }
+  }
+}
+
+main {
+  @include span-columns(12);
+  background-color: #000;
 }
