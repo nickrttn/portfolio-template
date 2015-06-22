@@ -28,45 +28,42 @@
     </header>
     <main>
       <div class='wrapper'>
-        <article>
-          <h1>Placemat</h1>
-          <p>Placemat is the result of the first group-project at Communication and Multimedia Design.  It provides culinary lovers with multiple walking tours they can follow through Amsterdam's ‘De Pijp’-neighbourhood.</p>
-          
-          <p>Along the way they gather a plethora of ingredients while receiving background info about the recipe these ingredients make up. At the end of the tour they get the accompanying recipe.</p>
-          
-          <p>The application uses the Google Maps API through a custom JavaScript geolocation toolkit by one of our teachers, <a href="https://twitter.com/ju5tu5">@ju5tu5</a>, which makes it very easy to pinpoint locations and create walking routes through JSON files.</p>
-          
-          <h3 id="example-part-of-the-json-file">Example part of the JSON file</h3>
-          
-          <pre class="highlight json"><code><span class="w">  </span><span class="p">{</span><span class="w">
-              </span><span class="nt">"googleMapsKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AIzaSyBnyib0uElbs0LNFobHjWhQMyTq-hiStEg"</span><span class="p">,</span><span class="w">
-              </span><span class="nt">"tourType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LINEAIR"</span><span class="p">,</span><span class="w">
-              </span><span class="nt">"mapOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"center"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">52.35955620231157</span><span class="p">,</span><span class="w"> </span><span class="mf">4.908019635968003</span><span class="p">],</span><span class="w">
-                </span><span class="nt">"zoom"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"disableDefaultUI"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"draggable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"scrollwheel"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"mapTypeControl"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"navigationControl"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"mapTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ROADMAP"</span><span class="w">
-              </span><span class="p">},</span><span class="w">
-              </span><span class="nt">"poiList"</span><span class="p">:[</span><span class="w">
-                </span><span class="p">{</span><span class="w">
-                  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alain Bernard"</span><span class="p">,</span><span class="w">
-                  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Voor velen de favoriete slager in de pijp. Ze hebben allerlei heerlijke worsten in hun assortiment met roots uit Frankrijk."</span><span class="p">,</span><span class="w">
-                  </span><span class="nt">"coordinate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">52.35537941106814</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.892667252574947</span><span class="w">
-                  </span><span class="p">},</span><span class="w">
-                  </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-                  </span><span class="nt">"onEnter"</span><span class="p">:</span><span class="s2">"atalainbernard.html"</span><span class="p">,</span><span class="w">
-                  </span><span class="nt">"onExit"</span><span class="p">:</span><span class="s2">"tomeneervanmourik.html"</span><span class="w">
+        <p>Placemat is the result of the first group-project at Communication and Multimedia Design.  It provides culinary lovers with multiple walking tours they can follow through Amsterdam's ‘De Pijp’-neighbourhood.</p>
+        
+        <p>Along the way they gather a plethora of ingredients while receiving background info about the recipe these ingredients make up. At the end of the tour they get the accompanying recipe.</p>
+        
+        <p>The application uses the Google Maps API through a custom JavaScript geolocation toolkit by one of our teachers, <a href="https://twitter.com/ju5tu5">@ju5tu5</a>, which makes it very easy to pinpoint locations and create walking routes through JSON files.</p>
+        
+        <h3 id="example-part-of-the-json-file">Example part of the JSON file</h3>
+        
+        <pre class="highlight json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"googleMapsKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AIzaSyBnyib0uElbs0LNFobHjWhQMyTq-hiStEg"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"tourType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LINEAIR"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"mapOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"center"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">52.35955620231157</span><span class="p">,</span><span class="w"> </span><span class="mf">4.908019635968003</span><span class="p">],</span><span class="w">
+              </span><span class="nt">"zoom"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"disableDefaultUI"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"draggable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"scrollwheel"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"mapTypeControl"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"navigationControl"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"mapTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ROADMAP"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nt">"poiList"</span><span class="p">:[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alain Bernard"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Voor velen de favoriete slager in de pijp. Ze hebben allerlei heerlijke worsten in hun assortiment met roots uit Frankrijk."</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"coordinate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">52.35537941106814</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.892667252574947</span><span class="w">
                 </span><span class="p">},</span><span class="w">
-              </span><span class="p">]</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span></code></pre>
-        </article>
+                </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"onEnter"</span><span class="p">:</span><span class="s2">"atalainbernard.html"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"onExit"</span><span class="p">:</span><span class="s2">"tomeneervanmourik.html"</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span></code></pre>
       </div>
     </main>
     <footer>
