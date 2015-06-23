@@ -434,8 +434,8 @@ button {
 
 /* line 1, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_forms.scss */
 fieldset {
-  background-color: #bababa;
-  border: 1px solid #a1a1a1;
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
   margin: 0 0 0.725em;
   padding: 1.45em; }
 
@@ -463,7 +463,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 select[multiple=multiple],
 textarea {
   background-color: #fff;
-  border: 1px solid #a1a1a1;
+  border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
@@ -477,7 +477,7 @@ textarea {
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
   select[multiple=multiple]:hover,
   textarea:hover {
-    border-color: #888888; }
+    border-color: #b3b3b3; }
   /* line 48, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_forms.scss */
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
   select[multiple=multiple]:focus,
@@ -545,14 +545,14 @@ table {
 
 /* line 9, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_tables.scss */
 th {
-  border-bottom: 1px solid #7b7b7b;
+  border-bottom: 1px solid #a6a6a6;
   font-weight: 600;
   padding: 0.725em 0;
   text-align: left; }
 
 /* line 16, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_tables.scss */
 td {
-  border-bottom: 1px solid #a1a1a1;
+  border-bottom: 1px solid #ccc;
   padding: 0.725em 0; }
 
 /* line 21, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_tables.scss */
@@ -615,26 +615,30 @@ p {
   margin: 1.45em 0; }
 
 /* line 80, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
+p + p {
+  margin: 0 0 1.45em; }
+
+/* line 84, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
 a {
   color: #d80000;
   text-decoration: none;
   transition: color 0.1s linear; }
-  /* line 85, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
+  /* line 89, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
   a:active, a:focus, a:hover {
     color: darkred; }
-  /* line 91, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
+  /* line 95, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
   a:active, a:focus {
     outline: none; }
 
-/* line 97, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
+/* line 101, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
 hr {
-  border-bottom: 1px solid #a1a1a1;
+  border-bottom: 1px solid #ccc;
   border-left: none;
   border-right: none;
   border-top: none;
   margin: 1.45em 0; }
 
-/* line 105, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
+/* line 109, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/base/_typography.scss */
 img,
 picture {
   margin: 0;
@@ -924,132 +928,420 @@ html {
 .highlight {
   background-color: #f8f8f8; }
 
+/* line 9, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+.chardinjs-overlay {
+  position: absolute;
+  z-index: 999999;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+/* line 17, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+.chardinjs-helper-layer {
+  position: absolute;
+  z-index: 9999998;
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  /* line 23, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-helper-layer.chardinjs-left {
+    border-left: solid white 1px;
+    margin-left: -10px; }
+  /* line 24, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-helper-layer.chardinjs-right {
+    border-right: solid white 1px;
+    padding-right: 10px; }
+  /* line 25, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-helper-layer.chardinjs-bottom {
+    border-bottom: solid white 1px;
+    padding-bottom: 10px; }
+  /* line 26, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-helper-layer.chardinjs-top {
+    border-top: solid white 1px;
+    padding-top: 10px; }
+
+/* line 29, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+.chardinjs-tooltip {
+  position: absolute;
+  -webkit-transition: opacity 0.1s ease-out;
+  -moz-transition: opacity 0.1s ease-out;
+  -ms-transition: opacity 0.1s ease-out;
+  -o-transition: opacity 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
+  max-width: 200px; }
+  /* line 34, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-left {
+    margin-left: -135px;
+    padding-right: 10px; }
+  /* line 35, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-right {
+    margin-right: -135px;
+    padding-left: 10px; }
+  /* line 36, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-bottom {
+    margin-bottom: -50px;
+    padding-top: 10px; }
+  /* line 37, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-top {
+    margin-top: -50px;
+    padding-bottom: 10px; }
+  /* line 39, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-right:before, .chardinjs-tooltip.chardinjs-left:after, .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-tooltip.chardinjs-top:after {
+    content: ".";
+    display: inline-block;
+    background-color: white;
+    height: 1px;
+    overflow: hidden;
+    position: absolute; }
+  /* line 48, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-right:before, .chardinjs-tooltip.chardinjs-left:after {
+    width: 100px;
+    top: 50%; }
+  /* line 53, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-tooltip.chardinjs-top:after {
+    width: 1px;
+    height: 50px;
+    left: 50%; }
+  /* line 59, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-bottom:before {
+    top: -50px; }
+  /* line 60, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-top:after {
+    bottom: -50px; }
+  /* line 61, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-right:before {
+    left: -100px; }
+  /* line 62, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+  .chardinjs-tooltip.chardinjs-left:after {
+    right: -100px; }
+
+/* line 65, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+.chardinjs-show-element {
+  z-index: 9999999;
+  opacity: 0.8; }
+
+/* line 70, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/vendor/_chardinjs.scss */
+.chardinjs-relative-position {
+  position: relative; }
+
 /* line 1, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-body {
+img {
+  margin: 1.45em 0; }
+
+/* line 5, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+header {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
   /* line 20, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
-  body::after {
+  header::after {
     clear: both;
     content: "";
     display: table; }
+  /* line 7, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  header .branding {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    padding: 0; }
+    /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+    header .branding:last-child {
+      margin-right: 0; }
+  /* line 11, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  header .branding {
+    padding: 0 0.725em; }
+    /* line 13, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    header .branding h1, header .branding p {
+      display: inline-block; }
+    /* line 16, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    header .branding h1 {
+      margin-bottom: .31em; }
+      /* line 18, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+      header .branding h1 span {
+        color: #ccc; }
+    /* line 22, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    header .branding p {
+      margin-top: 0;
+      margin-bottom: 0.725em;
+      color: #ccc; }
+  /* line 28, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  header nav {
+    border-top: 4px solid #d80000; }
+  @media screen and (min-width: 40em) {
+    /* line 32, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    header .branding {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 100%; }
+      /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      header .branding:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 53.75em) {
+    /* line 37, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    header .branding {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      header .branding:last-child {
+        margin-right: 0; } }
 
-/* line 5, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-img {
-  margin: 1.45em 0; }
-
-/* line 9, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-.wrapper {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  margin-right: 0; }
-  /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-  .wrapper:last-child {
-    margin-right: 0; }
-
-/* line 15, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-header .branding, header nav {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-  header .branding:last-child, header nav:last-child {
-    margin-right: 0; }
-/* line 19, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-header .branding h1, header .branding p {
-  display: inline-block; }
-/* line 22, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-header .branding h1 {
-  margin-right: 0.3625em; }
-/* line 26, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-header nav {
-  margin-right: 0;
-  padding-top: 4.1125em; }
-  /* line 29, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-  header nav ul {
-    float: right; }
-    /* line 31, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-    header nav ul li {
-      display: inline-block;
-      padding: 0 0.725em; }
-
-/* line 39, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 43, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 main {
-  margin-right: 0; }
-  /* line 41, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 20, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+  main::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 45, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   main article {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25.58941%;
-    margin-right: 0; }
+    margin-right: 7.42297%;
+    width: 100%;
+    padding: 0 0.725em; }
     /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
     main article:last-child {
       margin-right: 0; }
-  /* line 46, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    @media screen and (min-width: 40em) {
+      /* line 45, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+      main article {
+        float: left;
+        display: block;
+        margin-right: 4.82916%;
+        width: 100%; }
+        /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+        main article:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 53.75em) {
+      /* line 45, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+      main article {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+        main article:last-child {
+          margin-right: 0; } }
+    /* line 54, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    main article .meta {
+      color: #ccc;
+      font-size: 0.75em;
+      text-transform: uppercase; }
+  /* line 60, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   main .summary {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-left: 0%; }
+    margin-right: 7.42297%;
+    width: 100%; }
     /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
     main .summary:last-child {
       margin-right: 0; }
-    /* line 78, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
-    main .summary:nth-child(3n) {
-      margin-right: 0; }
-    /* line 83, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
-    main .summary:nth-child(3n+1) {
-      clear: left; }
-    /* line 50, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-    main .summary h2 a {
-      color: #333; }
-    /* line 53, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    /* line 62, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    main .summary h1 {
+      margin-bottom: .3em; }
+      /* line 64, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+      main .summary h1 a {
+        color: #333; }
+        /* line 66, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+        main .summary h1 a:hover, main .summary h1 a:focus {
+          color: #d80000; }
+    /* line 71, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
     main .summary p {
-      color: #a1a1a1; }
-  /* line 57, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+      color: #999; }
+  /* line 75, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   main .highlight {
     background-color: white; }
-    /* line 59, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    /* line 77, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
     main .highlight code {
       font-size: 0.625em;
       font-family: 'Roboto Mono', monospace; }
+  /* line 82, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  main .tags-archive {
+    padding: 0 0.725em; }
+    /* line 84, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    main .tags-archive article {
+      padding-left: 0; }
+  @media screen and (min-width: 40em) {
+    /* line 89, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    main .summary {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 47.58542%; }
+      /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      main .summary:last-child {
+        margin-right: 0; } }
 
-/* line 66, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 95, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 footer {
-  padding: 2em 0;
-  border-top: 1px solid #a1a1a1; }
-  /* line 69, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-  footer .copyright {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 0.725em 0; }
+  /* line 20, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+  footer::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 98, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  footer .copyright, footer nav {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
+    margin-right: 7.42297%;
+    width: 100%; }
     /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-    footer .copyright:last-child {
+    footer .copyright:last-child, footer nav:last-child {
       margin-right: 0; }
-  /* line 72, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-  footer .social {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    font-family: ionicons;
-    text-align: right; }
-    /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-    footer .social:last-child {
-      margin-right: 0; }
-    /* line 76, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-    footer .social li {
-      display: inline-block;
-      padding: 0 0.725em;
-      font-size: 2em; }
-      /* line 80, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
-      footer .social li a {
-        color: #a1a1a1; }
+  /* line 103, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  footer nav ul li {
+    display: inline-block;
+    margin-right: 0.725em; }
+  /* line 109, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  footer p {
+    color: #ccc; }
+    /* line 111, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    footer p a {
+      font-family: 'ionicons';
+      padding: 0 0 0 .25em;
+      color: #ccc; }
+  @media screen and (min-width: 40em) {
+    /* line 118, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    footer .copyright, footer nav {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 100%; }
+      /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      footer .copyright:last-child, footer nav:last-child {
+        margin-right: 0; } }
+
+/* Navigation */
+/* Overlay style */
+/* line 127, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(216, 0, 0, 0.9); }
+
+/* Overlay closing cross */
+/* line 137, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay .overlay-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border: none;
+  color: white;
+  outline: none;
+  z-index: 100;
+  font-family: 'Ionicons';
+  font-size: 3em;
+  line-height: 1;
+  background-color: transparent;
+  padding: .5em .75em; }
+
+/* Menu style */
+/* line 154, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  font-size: 54px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/* line 164, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative; }
+
+/* line 173, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px; }
+
+/* line 180, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay ul li a {
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+
+/* line 188, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+  color: #333; }
+
+/* Effects */
+/* line 194, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s; }
+
+/* line 201, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+
+/* line 208, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px; }
+
+/* line 213, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s; }
+
+/* line 221, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
+
+/* line 227, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+.overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg); }
+
+@media screen and (max-height: 30.5em) {
+  /* line 233, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  .overlay nav {
+    height: 70%;
+    font-size: 34px; }
+
+  /* line 237, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  .overlay ul li {
+    min-height: 34px; } }
