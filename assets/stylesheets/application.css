@@ -1184,9 +1184,15 @@ main {
       width: 47.58542%; }
       /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       main .summary:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+      /* line 78, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+      main .summary:nth-child(2n) {
+        margin-right: 0; }
+      /* line 83, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+      main .summary:nth-child(2n+1) {
+        clear: left; } }
 
-/* line 95, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 96, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 footer {
   max-width: 68em;
   margin-left: auto;
@@ -1197,7 +1203,7 @@ footer {
     clear: both;
     content: "";
     display: table; }
-  /* line 98, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  /* line 99, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   footer .copyright, footer nav {
     float: left;
     display: block;
@@ -1206,20 +1212,20 @@ footer {
     /* line 89, /Users/nickrttn/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
     footer .copyright:last-child, footer nav:last-child {
       margin-right: 0; }
-  /* line 103, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  /* line 104, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   footer nav ul li {
     display: inline-block;
     margin-right: 0.725em; }
-  /* line 109, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  /* line 110, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   footer p {
     color: #ccc; }
-    /* line 111, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    /* line 112, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
     footer p a {
       font-family: 'ionicons';
       padding: 0 0 0 .25em;
       color: #ccc; }
   @media screen and (min-width: 40em) {
-    /* line 118, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+    /* line 119, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
     footer .copyright, footer nav {
       float: left;
       display: block;
@@ -1231,7 +1237,7 @@ footer {
 
 /* Navigation */
 /* Overlay style */
-/* line 127, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 128, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay {
   position: fixed;
   width: 100%;
@@ -1241,7 +1247,7 @@ footer {
   background: rgba(216, 0, 0, 0.9); }
 
 /* Overlay closing cross */
-/* line 137, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 138, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay .overlay-close {
   position: absolute;
   right: 0;
@@ -1258,7 +1264,7 @@ footer {
   padding: .5em .75em; }
 
 /* Menu style */
-/* line 154, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 155, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay nav {
   text-align: center;
   position: relative;
@@ -1268,7 +1274,7 @@ footer {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/* line 164, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 165, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay ul {
   list-style: none;
   padding: 0;
@@ -1277,14 +1283,14 @@ footer {
   height: 100%;
   position: relative; }
 
-/* line 173, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 174, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay ul li {
   display: block;
   height: 20%;
   height: calc(100% / 5);
   min-height: 54px; }
 
-/* line 180, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 181, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay ul li a {
   font-weight: 300;
   display: block;
@@ -1292,32 +1298,32 @@ footer {
   -webkit-transition: color 0.2s;
   transition: color 0.2s; }
 
-/* line 188, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 189, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay ul li a:hover,
 .overlay ul li a:focus {
   color: #333; }
 
 /* Effects */
-/* line 194, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 195, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay-hugeinc {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
   transition: opacity 0.5s, visibility 0s 0.5s; }
 
-/* line 201, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 202, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay-hugeinc.open {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s; }
 
-/* line 208, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 209, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay-hugeinc nav {
   -webkit-perspective: 1200px;
   perspective: 1200px; }
 
-/* line 213, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 214, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay-hugeinc nav ul {
   opacity: 0.4;
   -webkit-transform: translateY(-25%) rotateX(35deg);
@@ -1325,23 +1331,23 @@ footer {
   -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s; }
 
-/* line 221, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 222, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay-hugeinc.open nav ul {
   opacity: 1;
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg); }
 
-/* line 227, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+/* line 228, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
 .overlay-hugeinc.close nav ul {
   -webkit-transform: translateY(25%) rotateX(-35deg);
   transform: translateY(25%) rotateX(-35deg); }
 
 @media screen and (max-height: 30.5em) {
-  /* line 233, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  /* line 234, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   .overlay nav {
     height: 70%;
     font-size: 34px; }
 
-  /* line 237, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
+  /* line 238, /Users/nickrttn/Developer/portfolio-template/source/assets/stylesheets/_global.scss */
   .overlay ul li {
     min-height: 34px; } }
