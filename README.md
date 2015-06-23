@@ -12,6 +12,14 @@ I found getting Middleman to work on a subdirectory quite hard so I would advise
 
 I'm trying to get a demo working sooner rather than later, check back for more information.
 
+## Instructions
+
+1. Install [Proteus](https://github.com/thoughtbot/proteus)
+2. Clone my repository
+3. Edit `config.rb`
+4. Get writing using the Middleman Blog gem, instructions [here](https://middlemanapp.com/basics/blogging/)
+5. When you're ready, `middleman deploy` to deploy to your own Github Pages repository, which you should have setup during the Proteus installation.
+
 ### Sources used
 
 - [Middleman Docs](https://middlemanapp.com/basics/install/)
