@@ -1,0 +1,31 @@
+.overlay.overlay-hugeinc
+  %button.overlay-close{type: "button"} &#xf404;
+  %nav
+    %ul
+      %li
+        = nav_link 'Home', '/'
+      %li
+        = nav_link 'About', '/about'
+      %li
+        = nav_link 'Contact', '/contact'
+%footer
+  %nav
+    %ul
+      %li
+        = nav_link 'Home', '/'
+      %li
+        = nav_link 'About', '/about'
+      %li
+        = nav_link 'Contact', '/contact'
+  %p.copyright
+    Made by
+    = name + '.'
+
+    - if twitter != ""
+      = link_to('&#xf243;', twitter)
+    - if github != ""
+      = link_to('&#xf233;', github)
+    - if facebook != ""
+      = link_to('&#xf231;', facebook)
+    - if linkedin != ""
+      = link_to('&#xf239;', linkedin)

@@ -6,14 +6,18 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
     %title= page_title
 
-    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "application", "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
 
   %body{class: page_classes}
     = partial "header"
 
     %main
-      .wrapper
-        = yield
+      = yield
+      - if current_page.url == "/"
+        - blog.articles[0..12].each do |article|
+          = partial "summary", :locals => { :article => article }
 
-    = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js", "application"
+    = partial "footer"
+
+    = javascript_include_tag "classie", "https://code.jquery.com/jquery-2.1.1.min.js", "https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js", "application"
     = google_analytics_universal_tag

@@ -1,43 +1,76 @@
-body {
-  @include outer-container;
-}
-
-.wrapper {
-  @include span-columns(12);
+img {
+  margin: 1.45em 0;
 }
 
 header {
-  .branding, nav {
-    @include span-columns(6 of 12);
+  @include outer-container();
+  .branding {
+    @include span-columns(4);
+    padding: 0;
   }
   .branding {
+    padding: 0 $small-spacing;
     h1, p {
       display: inline-block;
     }
     h1 {
-      margin-right: $small-spacing/2;
+      margin-bottom: .31em;
+      span {
+        color: $light-gray;
+      }
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: $small-spacing;
+      color: $light-gray;
     }
   }
   nav {
-    @include omega();
-    padding-top: $h1-font-size*1.75;
-    ul {
-      float: right;
-      li {
-        display: inline-block;
-        padding: 0 $small-spacing;
-      }
+    border-top: 4px solid $red;
+  }
+  @include media($medium-screen-up) {
+    .branding {
+      @include span-columns(6);
+    }
+  }
+  @include media($large-screen-up) {
+    .branding {
+      @include span-columns(12)
     }
   }
 }
 
 main {
-  aside {
-    @include span-columns(3);
-  }
+  @include outer-container();
   article {
-    @include span-columns(6);
-    @include omega;
+    @include span-columns(4);
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+    @include media($large-screen-up) {
+      @include span-columns(6);
+    }
+    padding: 0 $small-spacing;
+    .meta {
+      color: $light-gray;
+      font-size: 0.75em;
+      text-transform: uppercase;
+    }
+  }
+  .summary {
+    @include span-columns(4);
+    h1 {
+      margin-bottom: .3em;
+      a {
+        color: $dark-gray;
+        &:hover, &:focus {
+          color: $red;
+        }
+      }
+    }
+    p {
+      color: $medium-gray;
+    }
   }
   .highlight {
     background-color: white;
@@ -45,5 +78,163 @@ main {
       font-size: em(10);
       font-family: 'Roboto Mono', monospace;
     }
+  }
+  .tags-archive {
+    padding: 0 $small-spacing;
+    article {
+      padding-left: 0;
+    }
+  }
+  @include media($medium-screen-up){
+    .summary {
+      @include span-columns(3);
+    }
+  }
+}
+
+footer {
+  @include outer-container();
+  padding: 2em $small-spacing 0;
+  .copyright, nav {
+    @include span-columns(4);
+  }
+  nav {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: $small-spacing;
+      }
+    }
+  }
+  p {
+    color: $light-gray;
+    a {
+      font-family: 'ionicons';
+      padding: 0 0 0 .25em;
+      color: $light-gray;
+    }
+  }
+  @include media($medium-screen-up) {
+    .copyright, nav {
+      @include span-columns(6);
+    }
+  }
+}
+
+/* Navigation */
+
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba($red, 0.9);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border: none;
+  color: white;
+  outline: none;
+  z-index: 100;
+  font-family: 'Ionicons';
+  font-size: 3em;
+  line-height: 1;
+  background-color: transparent;
+  padding: .5em .75em;
+}
+
+/* Menu style */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  font-size: 54px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px;
+}
+
+.overlay ul li a {
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+  color: $dark-gray;
+}
+
+/* Effects */
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
   }
 }

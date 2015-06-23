@@ -1,0 +1,10 @@
+%article.summary
+  %h1
+    %a{:href => "#{article.url}"}= article.title
+  %div.meta
+    %time{datetime: "#{article.date}"}= article.date.strftime('%B %e, %Y')
+  = article.summary
+  %p.tags
+    - article.tags[0..-1-1].each do |tag|
+      = link_to(tag, "/portfolio/tags/#{tag}") + ' ::'
+    = link_to(article.tags[-1], "/portfolio/tags/#{article.tags[-1]}")

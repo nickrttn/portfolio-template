@@ -1,8 +1,11 @@
-= wrap_layout :layout do
-  %aside
-    - current_page.tags.each do |tag|
-      = link_to tag, tag_path(tag)
+= wrap_layout :application do
   %article
-    %h2= current_page.data.title
-    = article.data
+    %h1= current_page.title
+    %div.meta
+      %time{datetime: "#{current_page.date}"}= current_page.date.strftime('%B %e, %Y')
     = yield
+    %h4 Tags
+    %p.tags
+      - current_page.tags[0..-1-1].each do |tag|
+        = link_to(tag, "/portfolio/tags/#{tag}") + ' ::'
+      = link_to(current_page.tags[-1], "/portfolio/tags/#{current_page.tags[-1]}")

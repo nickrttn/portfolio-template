@@ -2,10 +2,9 @@
 title: Placemat
 date: 2015-06-14 14:57 CEST
 tags: geolocation, mobile, design, ux
-category: front-end
 ---
 
-Placemat is the result of the first group-project at Communication and Multimedia Design. It provides culinary lovers with multiple walking tours they can follow, which take them through Amsterdam's ‘De Pijp’-neighbourhood.
+Placemat is the result of the first group-project at Communication and Multimedia Design. SUMMARY_END It provides culinary lovers with multiple walking tours they can follow through Amsterdam's ‘De Pijp’-neighbourhood.
 
 Along the way they gather a plethora of ingredients while receiving background info about the recipe these ingredients make up. At the end of the tour they get the accompanying recipe.
 

@@ -9,7 +9,14 @@ set :name, "Nick Rutten"
 # Fill in your role here.
 set :role, "UI :: UX :: IxD :: Front-end"
 
-# Set up portfolio title
+# Social media
+# Fill in links to your social profiles here. Leave the accolades empty to disable the icons. The icons show up in the footer.
+set :twitter, "https://twitter.com/nickrttn"
+set :github, "https://github.com/nickrttn"
+set :facebook, ""
+set :linkedin, ""
+
+# Set up page title
 activate :title, site: 'Nick Rutten', separator: ' :: '
 
 # Google Analytics tracking
@@ -28,10 +35,12 @@ activate :i18n
 # Enable and configure portfolio items
 activate :blog do |blog|
   # Blog options
-  blog.sources = "{title}.html"
   blog.prefix = "portfolio"
   blog.permalink = "{title}.html"
-  blog.layout = "article"
+  blog.summary_separator = /SUMMARY_END/
+  blog.layout = 'article'
+  blog.taglink = "tags/{tag}.html"
+  blog.tag_template = "tag.html"
 end
 
 activate :views
@@ -47,8 +56,6 @@ set :fonts_dir, 'assets/fonts'
 set :layout, 'layouts/application'
 set :partials_dir, 'layouts/partials'
 
-page 'portfolio/*', :layout => :article
-
 configure :development do
  activate :livereload
 end
@@ -56,6 +63,7 @@ end
 configure :build do
   # Relative assets needed to deploy to Github Pages
   activate :relative_assets
+  activate :imageoptim
 end
 
 activate :deploy do |deploy|
