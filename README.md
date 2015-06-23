@@ -1,3 +1,25 @@
+# Portfolio Template for Middleman
+
+This is a portfolio template for Middleman, a static website generator. It is published under the MIT license, which means you can do whatever you want with it.
+
+It generates your portfolio website. You can do all your file editing on your own computer and publish your website with one simple command.
+
+For more information about publishing your website, check out the [Proteus](http://github.com/thoughtbot/proteus) documentation. For the use and installation instructions of Middleman, check out [Middleman](http://middlemanapp.com).
+
+To configure the template you need to customize the `config.rb` file. You can find more instructions there.
+
+I found getting Middleman to work on a subdirectory quite hard so I would advise you not to do that.
+
+I'm trying to get a demo working sooner rather than later, check back for more information.
+
+### Sources used
+
+- [Middleman Docs](https://middlemanapp.com/basics/install/)
+- [Proteus](https://github.com/thoughtbot/proteus)
+- [Github Pages](https://pages.github.com/)
+- [StackOverflow](https://stackoverflow.com/)
+- [Rubygems](http://rubygems.org)
+
 # Proteus - Middleman
 
 ## About Proteus

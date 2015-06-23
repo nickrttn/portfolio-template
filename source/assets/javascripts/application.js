@@ -1,4 +1,3 @@
-//= require chardinjs
 //= require_tree .
 
 $(document).ready(function(){
