@@ -63,6 +63,7 @@ end
 configure :build do
   # Relative assets needed to deploy to Github Pages
   activate :relative_assets
+  set :relative_links, true
   activate :imageoptim
 end
 
